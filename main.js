@@ -17,7 +17,7 @@ function populateStorage(){
     
     localStorage.setItem('font', document.getElementById('font').value);
     
-    localStorage.setItem('image', document.getElementById('img').value);
+    localStorage.setItem('image', document.getElementById('image').value);
 
     setStyles();
 }
@@ -32,10 +32,10 @@ function setStyles() {
     document.getElementById('image').value = currentImage;
 
     htmlElem.style.backgroundColor = '#' + currentColor;
-    pEleme.style.fontFamily = currentFont;
+    pElem.style.fontFamily = currentFont;
     imgElem.setAttribute('src', currentImage);
 }
 
 bgcolorForm.onchange = populateStorage;
 fontForm.onchange = populateStorage;
-imageForm.oncancel = populateStorage;
+imageForm.onchange = populateStorage;
